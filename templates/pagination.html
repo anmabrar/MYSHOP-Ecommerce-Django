@@ -1,0 +1,11 @@
+{% if product_list.has_previous %}
+<a href="?page={{ product_list.previous_page_number }}"><</a>
+{% endif %}
+{% for page in paginator.page_range %}
+    {% if product_list.number > page|add:"-3" and product_list.number < page|add:"+3" %}
+        <a href="?page={{page}}" class="{% if page == product_list.number %}active{% endif %}">{{ page }}</a>
+    {% endif %}
+{% endfor %}
+{% if product_list.has_next %}
+<a href="?page={{ product_list.next_page_number }}">></a>
+{% endif %}
