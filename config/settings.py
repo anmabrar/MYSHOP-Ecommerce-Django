@@ -126,3 +126,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SESSION_COOKIE_AGE = 8600
 CART_ID = 'cart'
+COUPON_ID = 'coupon'
